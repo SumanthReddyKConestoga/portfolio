@@ -1,0 +1,18 @@
+node_modules/
+.next/
+out/
+.env
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# Leftover working files (superseded; sandbox file-lock prevented deletion)
+public/images/Picture*.png
+public/images/*-*-*-*-*.png
+public/images/sumanth.jpg.png
+public/images/EY logo.png
+public/images/conestoga logo.jpg
+public/images/SASTRA logo.jpg
+public/images/logos/Microsoft.png
+public/images/logos/linux.png
