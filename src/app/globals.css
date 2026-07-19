@@ -75,3 +75,10 @@ body {
     animation: none;
   }
 }
+
+/* Native <select> dropdown menus ignore the page theme on Windows —
+   force readable dark options explicitly. */
+select option {
+  background-color: #12163a;
+  color: #f7f8fc;
+}

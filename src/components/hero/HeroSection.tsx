@@ -19,7 +19,7 @@ export default function HeroSection() {
         animate="visible"
         className="mx-auto flex max-w-3xl flex-col items-center px-6 text-center"
       >
-        <motion.div variants={fadeUp} className="mb-6">
+        <motion.div variants={fadeUp} className="mb-5">
           <span className="relative inline-block rounded-full bg-gradient-to-b from-accent/50 to-accent/10 p-[3px] shadow-[0_0_40px_-10px_rgba(232,121,249,0.5)]">
             <Image
               src="/images/sumanth.jpg"
@@ -31,6 +31,19 @@ export default function HeroSection() {
             />
           </span>
         </motion.div>
+
+        <motion.p
+          variants={fadeUp}
+          className="mb-2 font-display text-2xl font-bold tracking-tight text-content-primary sm:text-3xl"
+        >
+          Sumanth Reddy Konannagari
+        </motion.p>
+        <motion.p
+          variants={fadeUp}
+          className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-accent"
+        >
+          Full-Stack AI Engineer
+        </motion.p>
 
         <motion.p
           variants={fadeUp}

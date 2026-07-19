@@ -62,12 +62,16 @@ export default function ContactSection() {
     setStatus("idle");
     try {
       if (!WEB3FORMS_KEY) {
-        // Form service not configured — fall back to a prefilled mailto.
+        // Form service not configured — open Gmail compose prefilled (works without a mail app).
         const subject = encodeURIComponent(`Portfolio contact from ${data.name}`);
         const body = encodeURIComponent(
           `${data.message}\n\n— ${data.name} (${data.email})${data.company ? `, ${data.company}` : ""}`
         );
-        window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+        window.open(
+          `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}&su=${subject}&body=${body}`,
+          "_blank",
+          "noopener,noreferrer"
+        );
         setStatus("success");
         reset();
         return;
@@ -122,7 +126,9 @@ export default function ContactSection() {
               </p>
               <div className="mt-3 flex flex-wrap items-center gap-2">
                 <a
-                  href={`mailto:${profile.email}`}
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}&su=${encodeURIComponent("Opportunity for Sumanth Reddy")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="focus-ring inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-base-950 transition-transform hover:scale-[1.02]"
                 >
                   <Mail size={15} aria-hidden /> Email me
